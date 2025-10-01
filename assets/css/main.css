@@ -1,2 +1,29 @@
 @import 'tailwindcss';
 @source "../../hugo_stats.json";
+
+:root {
+  /* Enables automatic switching based on system preference */
+  color-scheme: light dark;
+
+  /* Default colors */
+  --tcg-fg-base: light-dark(var(--color-black), var(--color-white));
+  --tcg-fg-muted: light-dark(var(--color-black-800), var(--color-black-200));
+  --tcg-bg-base: light-dark(var(--color-white), var(--color-black));
+  --tcg-bg-muted: light-dark(var(--color-black-200), var(--color-black-800));
+}
+
+.fg-base {
+  color: var(--tcg-fg-base);
+}
+
+.fg-muted {
+  color: var(--tcg-fg-muted);
+}
+
+.bg-base {
+  background-color: var(--tcg-bg-base);
+}
+
+.bg-muted {
+  background-color: var(--tcg-bg-muted);
+}
