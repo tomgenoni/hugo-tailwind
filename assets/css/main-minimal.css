@@ -1,0 +1,4 @@
+/* Loads all of Tailwind */
+
+@import 'tailwindcss';
+@source "../../hugo_stats.json";
