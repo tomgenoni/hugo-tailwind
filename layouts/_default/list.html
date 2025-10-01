@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ partialCached "css.html" . }}
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        <section>
+            <h2>All Posts</h2>
+            <ul>
+            {{ range .Pages }}
+                <li>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <p>{{ .Summary }}</p>
+                </li>
+            {{ end }}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Hugo Site. All rights reserved.</p>
+    </footer>
+</body>
+</html>

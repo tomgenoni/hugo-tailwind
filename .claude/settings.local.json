@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "WebSearch",
+      "WebFetch(domain:gohugo.io)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
