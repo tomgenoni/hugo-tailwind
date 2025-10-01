@@ -14,11 +14,16 @@
       "meta",
       "nav",
       "p",
+      "script",
       "section",
       "title",
       "ul"
     ],
-    "classes": null,
+    "classes": [
+      "bg-blue-500",
+      "bg-red-500",
+      "bg-yellow-500"
+    ],
     "ids": null
   }
 }

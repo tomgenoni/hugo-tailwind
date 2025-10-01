@@ -1,2 +1,2 @@
-@import "tailwindcss";
-@source "hugo_stats.json";
+@import 'tailwindcss';
+@source "../../hugo_stats.json";

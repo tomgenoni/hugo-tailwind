@@ -8,18 +8,24 @@ title = 'My New Hugo Site'
 [build.buildStats]
   enable = true
 
+[[build.buildStats.disableClasses]]
+  tags = true
+
+[[build.buildStats.disableIDs]]
+  tags = true
+
 [[build.cachebusters]]
-  source = "assets/watching/hugo_stats\\.json"
-  target = "styles\\.css"
+  source = "hugo_stats\\.json"
+  target = "css"
 
 [[build.cachebusters]]
   source = "(postcss|tailwind)\\.config\\.js"
   target = "css"
 
 [[build.cachebusters]]
-  source = "assets/.*\\.(js|ts|jsx|tsx)"
-  target = "js"
+  source = "layouts/.*\\.html"
+  target = "css"
 
 [[build.cachebusters]]
-  source = "assets/.*\\.(.*)$"
-  target = "$1"
+  source = "content/.*\\.md"
+  target = "css"
