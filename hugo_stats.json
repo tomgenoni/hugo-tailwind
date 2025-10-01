@@ -9,6 +9,7 @@
       "head",
       "header",
       "html",
+      "li",
       "link",
       "main",
       "meta",
@@ -21,10 +22,9 @@
     ],
     "classes": [
       "bg-base",
-      "bg-blue-500",
-      "bg-red-500",
-      "bg-yellow-500",
-      "foo"
+      "bg-muted",
+      "mb-sm",
+      "p-x-lg"
     ],
     "ids": null
   }

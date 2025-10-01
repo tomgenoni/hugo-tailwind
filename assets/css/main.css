@@ -1,15 +1,68 @@
 @import 'tailwindcss';
 @source "../../hugo_stats.json";
 
-:root {
-  /* Enables automatic switching based on system preference */
+/* If you were going to support dark mode */
+/* :root {
   color-scheme: light dark;
-
-  /* Default colors */
   --tcg-fg-base: light-dark(var(--color-black), var(--color-white));
   --tcg-fg-muted: light-dark(var(--color-black-800), var(--color-black-200));
   --tcg-bg-base: light-dark(var(--color-white), var(--color-black));
   --tcg-bg-muted: light-dark(var(--color-black-200), var(--color-black-800));
+} */
+
+/* This @theme section is optional. It allows you to override Tailwind's default themes
+and disable categories so you're using them accidentally. In this case we're disabling
+most categories and redefining "breakpoint" and "spacing" categories to use a much smaller
+set of values. */
+
+@theme {
+  /* Disable most categories */
+  --animate-*: initial;
+  --aspect-*: initial;
+  --blur-*: initial;
+  --breakpoint-*: initial;
+  --color-*: initial;
+  --container-*: initial;
+  --drop-shadow-*: initial;
+  --ease-*: initial;
+  --font-*: initial;
+  --font-weight-*: initial;
+  --inset-shadow-*: initial;
+  --leading-*: initial;
+  --perspective-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --spacing-*: initial;
+  --text-*: initial;
+  --tracking-*: initial;
+
+  /* Custom breakpoints, will autocomplete in IDE. E.g, class="md:hidden" */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 64rem;
+  --breakpoint-lg: 80rem;
+
+  /* Custom spacing, will autocomplete in IDE. E.g, class="mb-sm" */
+  --spacing-xxx-sm: 0.125rem;
+  --spacing-xx-sm: 0.25rem;
+  --spacing-x-sm: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.25rem;
+  --spacing-x-lg: 1.5rem;
+  --spacing-xx-lg: 2rem;
+  --spacing-xxx-lg: 2.5rem;
+}
+
+/* Everything above this line up to `@source` can be deleted if you want all of Tailwind to load. */
+/* Single colors referencing Tailwind color variables https://tailwindcss.com/docs/colors */
+
+:root {
+  --tcg-fg-base: var(--color-black);
+  --tcg-fg-muted: var(--color-black-800);
+  --tcg-bg-base: var(--color-white);
+  --tcg-bg-muted: var(--color-black-200);
+  --tcg-border-base: var(--color-black-300);
+  --tcg-border-muted: var(--color-black-200);
 }
 
 .fg-base {
@@ -26,4 +79,12 @@
 
 .bg-muted {
   background-color: var(--tcg-bg-muted);
+}
+
+.border-base {
+  border-color: var(--tcg-border-base);
+}
+
+.border-muted {
+  border-color: var(--tcg-border-muted);
 }
