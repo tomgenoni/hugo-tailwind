@@ -2,6 +2,11 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
+    --color-gray-200: oklch(0.928 0.006 264.531);
+    --color-gray-300: oklch(0.872 0.01 258.338);
+    --color-gray-800: oklch(0.278 0.033 256.848);
+    --color-black: #000;
+    --color-white: #fff;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -166,17 +171,29 @@
   .mb-sm {
     margin-bottom: var(--spacing-sm);
   }
+  .flex {
+    display: flex;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .gap-sm {
+    gap: var(--spacing-sm);
+  }
   .p-x-lg {
     padding: var(--spacing-x-lg);
+  }
+  .text-center {
+    text-align: center;
   }
 }
 :root {
   --tcg-fg-base: var(--color-black);
-  --tcg-fg-muted: var(--color-black-800);
+  --tcg-fg-muted: var(--color-gray-800);
   --tcg-bg-base: var(--color-white);
-  --tcg-bg-muted: var(--color-black-200);
-  --tcg-border-base: var(--color-black-300);
-  --tcg-border-muted: var(--color-black-200);
+  --tcg-bg-muted: var(--color-gray-200);
+  --tcg-border-base: var(--color-gray-300);
+  --tcg-border-muted: var(--color-gray-200);
 }
 .fg-base {
   color: var(--tcg-fg-base);

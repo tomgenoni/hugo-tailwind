@@ -23,8 +23,12 @@
     "classes": [
       "bg-base",
       "bg-muted",
+      "flex",
+      "flex-1",
+      "gap-sm",
       "mb-sm",
-      "p-x-lg"
+      "p-x-lg",
+      "text-center"
     ],
     "ids": null
   }

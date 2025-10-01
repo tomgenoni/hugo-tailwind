@@ -21,7 +21,6 @@ set of values. */
   --aspect-*: initial;
   --blur-*: initial;
   --breakpoint-*: initial;
-  --color-*: initial;
   --container-*: initial;
   --drop-shadow-*: initial;
   --ease-*: initial;
@@ -58,11 +57,11 @@ set of values. */
 
 :root {
   --tcg-fg-base: var(--color-black);
-  --tcg-fg-muted: var(--color-black-800);
+  --tcg-fg-muted: var(--color-gray-800);
   --tcg-bg-base: var(--color-white);
-  --tcg-bg-muted: var(--color-black-200);
-  --tcg-border-base: var(--color-black-300);
-  --tcg-border-muted: var(--color-black-200);
+  --tcg-bg-muted: var(--color-gray-200);
+  --tcg-border-base: var(--color-gray-300);
+  --tcg-border-muted: var(--color-gray-200);
 }
 
 .fg-base {
