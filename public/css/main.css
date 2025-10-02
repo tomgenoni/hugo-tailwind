@@ -173,6 +173,9 @@
   .absolute {
     position: absolute;
   }
+  .relative {
+    position: relative;
+  }
   .m-x-lg {
     margin: var(--spacing-x-lg);
   }

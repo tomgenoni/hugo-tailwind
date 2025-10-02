@@ -107,6 +107,7 @@ set of values. */
 
 .scroller_logos {
   display: flex;
+  /* Change `20s` to a different value to change the scroll speed */
   animation: scrolling-animation 20s linear infinite;
   will-change: transform;
 }
