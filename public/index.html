@@ -16,26 +16,49 @@
 
   </head>
   <body>
-    <header>
-      <h1 class="mb-sm">Welcome to My Hugo Site</h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-      </nav>
-    </header>
-    <main>
-      
+    <div class="wrap">
       <section>
-        <ul class="flex gap-sm">
+        <div>Flex changes at medium breakpoint</div>
+        <ul class="flex flex-col gap-sm md:flex-row">
           <li class="p-x-lg bg-muted flex-1 text-center">a</li>
           <li class="p-x-lg bg-muted flex-1 text-center">b</li>
           <li class="p-x-lg bg-muted flex-1 text-center">c</li>
         </ul>
       </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 My Hugo Site. All rights reserved.</p>
-    </footer>
+      <section>
+        <div>Grid layout</div>
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-sm">
+          <li class="p-x-lg bg-muted text-center">a</li>
+          <li class="p-x-lg bg-muted text-center">b</li>
+          <li class="p-x-lg bg-muted text-center">c</li>
+          <li class="p-x-lg bg-muted text-center">d</li>
+          <li class="p-x-lg bg-muted text-center">e</li>
+          <li class="p-x-lg bg-muted text-center">f</li>
+        </ul>
+      </section>
+    </div>
+    <div class="py-xxx-lg">
+      <div>Repeating CSS-only scroller</div>
+      <div class="scroller">
+        <div class="logos">
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">1</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">2</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">3</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">4</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">5</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">6</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">7</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">8</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">1</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">2</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">3</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">4</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">5</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">6</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">7</div>
+          <div class="w-[200px] flex-none bg-muted mr-xxx-lg">8</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

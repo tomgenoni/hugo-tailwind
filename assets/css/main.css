@@ -87,3 +87,31 @@ set of values. */
 .border-muted {
   border-color: var(--tcg-border-muted);
 }
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+.scroller {
+  display: flex;
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+  animation: scrolling-animation 20s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scrolling-animation {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translate(-50%);
+  }
+}

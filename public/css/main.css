@@ -20,7 +20,9 @@
       --font-mono--font-variation-settings
     );
     --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
     --spacing-x-lg: 1.5rem;
+    --spacing-xxx-lg: 2.5rem;
   }
 }
 @layer base {
@@ -168,23 +170,66 @@
   }
 }
 @layer utilities {
+  .mr-x-lg {
+    margin-right: var(--spacing-x-lg);
+  }
+  .mr-xxx-lg {
+    margin-right: var(--spacing-xxx-lg);
+  }
   .mb-sm {
     margin-bottom: var(--spacing-sm);
   }
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
+  .w-\[100px\] {
+    width: 100px;
+  }
+  .w-\[200px\] {
+    width: 200px;
+  }
   .flex-1 {
     flex: 1;
+  }
+  .flex-none {
+    flex: none;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .gap-sm {
     gap: var(--spacing-sm);
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .p-md {
+    padding: var(--spacing-md);
+  }
   .p-x-lg {
     padding: var(--spacing-x-lg);
   }
+  .py-xxx-lg {
+    padding-block: var(--spacing-xxx-lg);
+  }
   .text-center {
     text-align: center;
+  }
+  .md\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
+    }
   }
 }
 :root {
@@ -212,5 +257,28 @@
 }
 .border-muted {
   border-color: var(--tcg-border-muted);
+}
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+.scroller {
+  display: flex;
+  overflow: hidden;
+}
+.logos {
+  display: flex;
+  animation: scrolling-animation 20s linear infinite;
+  will-change: transform;
+}
+@keyframes scrolling-animation {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-50%);
+  }
 }
 
