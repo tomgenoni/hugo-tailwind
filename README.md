@@ -46,7 +46,7 @@ Here we have turned off all of the default "spacing" values, which powers the de
 
 #### Custom classes
 
-Here we're turning off all Tailwind classes completely and defining a custom foreground class (used for text and icons) completely outside of the Tailwind system. Creating a small set of classes for foregrounds, backgrounds, and borders is often all you need to build your UI.
+Here we're turning off all Tailwind classes completely and defining a custom foreground class (used for text and icons) completely outside of the Tailwind system. Creating a small set of classes for foregrounds, backgrounds, and borders is often all you need to build your UI. And I would recommend using the hex values from the [color palettes that Tailwind has documented](https://tailwindcss.com/docs/colors). Creating your own custom balanced palette is not trivial and the authors of Tailwind did a great job building these.
 
 ```css
 @theme {
