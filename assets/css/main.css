@@ -22,6 +22,7 @@ set of values. */
   --blur-*: initial;
   --breakpoint-*: initial;
   --container-*: initial;
+  --color-*: initial;
   --drop-shadow-*: initial;
   --ease-*: initial;
   --font-*: initial;
@@ -53,15 +54,15 @@ set of values. */
 }
 
 /* Everything above this line up to `@source` can be deleted if you want all of Tailwind to load. */
-/* Single colors referencing Tailwind color variables https://tailwindcss.com/docs/colors */
+/* These color hex values use the Tailwind color palette https://tailwindcss.com/docs/colors */
 
 :root {
-  --tcg-fg-base: var(--color-black);
-  --tcg-fg-muted: var(--color-gray-800);
-  --tcg-bg-base: var(--color-white);
-  --tcg-bg-muted: var(--color-gray-200);
-  --tcg-border-base: var(--color-gray-300);
-  --tcg-border-muted: var(--color-gray-200);
+  --tcg-fg-base: #000000;
+  --tcg-fg-muted: #1e2939;
+  --tcg-bg-base: #ffffff;
+  --tcg-bg-muted: #e5e6ea;
+  --tcg-border-base: #d1d5dc;
+  --tcg-border-muted: #e5e6ea;
 }
 
 .fg-base {
@@ -88,6 +89,8 @@ set of values. */
   border-color: var(--tcg-border-muted);
 }
 
+/* A class to constrain content to a maximum width */
+
 .wrap {
   max-width: 900px;
   margin: 0 auto;
@@ -95,12 +98,14 @@ set of values. */
   padding-right: var(--spacing-md);
 }
 
+/* A class to constrain content to a maximum width */
+
 .scroller {
   display: flex;
   overflow: hidden;
 }
 
-.logos {
+.scroller_logos {
   display: flex;
   animation: scrolling-animation 20s linear infinite;
   will-change: transform;

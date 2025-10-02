@@ -2,11 +2,6 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --color-gray-200: oklch(0.928 0.006 264.531);
-    --color-gray-300: oklch(0.872 0.01 258.338);
-    --color-gray-800: oklch(0.278 0.033 256.848);
-    --color-black: #000;
-    --color-white: #fff;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -19,9 +14,14 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --spacing-xxx-sm: 0.125rem;
+    --spacing-xx-sm: 0.25rem;
+    --spacing-x-sm: 0.5rem;
     --spacing-sm: 0.75rem;
     --spacing-md: 1rem;
+    --spacing-lg: 1.25rem;
     --spacing-x-lg: 1.5rem;
+    --spacing-xx-lg: 2rem;
     --spacing-xxx-lg: 2.5rem;
   }
 }
@@ -170,6 +170,12 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .m-x-lg {
+    margin: var(--spacing-x-lg);
+  }
   .mr-x-lg {
     margin-right: var(--spacing-x-lg);
   }
@@ -233,12 +239,12 @@
   }
 }
 :root {
-  --tcg-fg-base: var(--color-black);
-  --tcg-fg-muted: var(--color-gray-800);
-  --tcg-bg-base: var(--color-white);
-  --tcg-bg-muted: var(--color-gray-200);
-  --tcg-border-base: var(--color-gray-300);
-  --tcg-border-muted: var(--color-gray-200);
+  --tcg-fg-base: #000000;
+  --tcg-fg-muted: #1e2939;
+  --tcg-bg-base: #ffffff;
+  --tcg-bg-muted: #e5e6ea;
+  --tcg-border-base: #d1d5dc;
+  --tcg-border-muted: #e5e6ea;
 }
 .fg-base {
   color: var(--tcg-fg-base);
@@ -268,7 +274,7 @@
   display: flex;
   overflow: hidden;
 }
-.logos {
+.scroller_logos {
   display: flex;
   animation: scrolling-animation 20s linear infinite;
   will-change: transform;
